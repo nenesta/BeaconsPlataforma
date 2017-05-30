@@ -65,7 +65,7 @@
                         <a href="contenido.html"><i class="fa fa-edit"></i> <span class="nav-label">Contenido</span></a>
                     </li>
                     <li>
-                        <a href="usuarios.html"><i class="fa fa-users"></i> <span class="nav-label">Usuarios</a>
+                        <a href="usuarios.html"><i class="fa fa-users"></i> <span class="nav-label">Usuarios<span class="label label-info pull-right">48</span></a>
                     </li>
                     <li>
                         <a href="configuracion.html"><i class="fa fa-gears"></i> <span class="nav-label">Configuración</span>  </a>
@@ -209,7 +209,7 @@
             <div class="col-lg-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5><i class="fa fa-bluetooth"></i> Estado de Beacons</h5>
+                        <h5><i class="fa fa-bluetooth"></i> Estado de Beacons&nbsp; <small><strong>&nbsp; 62 Beacons</strong>, 57 Activos</small></h5>
                         <div class="ibox-tools">
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
@@ -218,9 +218,9 @@
                                 <i class="fa fa-wrench"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">Config option 1</a>
+                                <li><a href="#"><span class="fa fa-file-excel-o .dim">&nbsp; Exportar a Excel</span>  </a>
                                 </li>
-                                <li><a href="#">Config option 2</a>
+                                <li><a href="#"><span class="fa fa-file-pdf-o .dim">&nbsp; Exportar a Pdf</span> </a>
                                 </li>
                             </ul>
                             <a class="close-link">
@@ -341,7 +341,57 @@
                         </button>
                     </div>
                     <div>
+                        <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <i class="fa fa-bluetooth modal-icon"></i>
+                                            <h4 class="modal-title">Registro de usuario</h4>
+                                        <small class="font-bold">Complete los campos del formulario luego presione el boton guardar para registrar el nuevo usuario, de lo contrario presione cancelar para salir.</small>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label>UUID</label>
+                                            <input type="input" placeholder="Ingrese el nombre del usuario" class="form-control m-b">
 
+                                            <label>&nbsp;</label>
+                                            
+                                            <label>Major</label>
+                                            <input type="input" placeholder="Enter you" class="form-control m-b">
+                                            
+                                            <label>Minor</label> 
+                                            <input type="input" placeholder="Enter your" class="form-control m-b">
+                                            
+                                            <label>Marca</label> 
+                                            <select class="form-control m-b" name="Estado">
+                                                <option value="1">Accent Systems</option>       
+                                                <option value="2">Beaconinside</option> 
+                                                <option value="3">Blesh</option>    
+                                                <option value="4">Bluecats</option>         
+                                                <option value="5">BlueUp</option>       
+                                                <option value="6">Bluvison</option>         
+                                                <option value="7">Estimote</option>     
+                                                <option value="8">Gimbal</option>       
+                                                <option value="9">Kontakt.io</option>       
+                                                <option value="10">Minewtech</option>       
+                                                <option value="11">Nordic Semiconductor</option>        
+                                                <option value="12">Radius Networks</option>
+                                                <option value="13">Reco</option>
+                                                <option value="14">Sensoro</option>
+                                                <option value="15">Signal360</option>
+                                            </select>
+                                        </div>                                            
+                                    </div>
+                                    <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-primary">Registrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
                                 <nav>
                                     <ul class="pagination">
                                         <li class="page-item"><a class="page-link" href="#">Prev</a>
@@ -358,9 +408,7 @@
                                         <li class="page-item"><a class="page-link" href="#">Next</a>
                                         </li>
                                     </ul>
-                                </nav>
-
-                    
+                                </nav>                    
                     </div>
                     <div>
                         <!--button id="myBtn" type="button" class="btn btn-info btn-md " data-toggle="modal" data-target="#myModal" style="float: right;"><i class="fa fa-bluetooth-b"></i>&nbsp; Registrar Beacons
