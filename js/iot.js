@@ -70,7 +70,9 @@ miDibujo.shadowOffsetY=20;
                 -moz-box-shadow: 0 10px 6px -6px #777;
                 box-shadow: 0 10px 6px -6px #777;
 */                                
-			  }
+			  }else{
+                                $(this).offset({ top: yPosOld, left: xPosOld });
+                          }
 		}	
 	});
 	
@@ -107,7 +109,9 @@ miDibujo.shadowOffsetY=20;
                                 $(this).offset({ top: yPosOld, left: xPosOld });
 				$('#box').append(elemento);
                                 elemento.offset({ top: yPos, left: xPos })
-			  }
+			  }else{
+                                $(this).offset({ top: yPosOld, left: xPosOld });
+                          }
 		}	
 	});
         
