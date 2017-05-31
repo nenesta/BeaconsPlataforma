@@ -46,12 +46,27 @@ $(document).ready(function(){
 				elemento.css('position', 'absolute');
 				elemento.css('width', '100px');
 				elemento.css('height', '100px');
+				elemento.css('-webkit-box-shadow', '10px 10px 6px -6px #777');
+				elemento.css('-moz-box-shadow', '10px 10px 6px -6px #777');
+				elemento.css('box-shadow', '10px 10px 6px -6px #777');
 				elemento.css('background-color', 'rgb('+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+')');
                                 elemento.prop('id', 'cuad-'+contCuad++);
                                 elemento.prop('class', 'cuadrado');
                                 $(this).offset({ top: yPosOld, left: xPosOld });
 				$('#box').append(elemento);
                                 elemento.offset({ top: yPos, left: xPos })
+/* 
+miDibujo.shadowColor="black";
+miDibujo.shadowOffsetX=10;
+miDibujo.shadowOffsetY=20;
+				elemento.css('shadowColor', 'black');
+				elemento.css('shadowOffsetX', '10');
+				elemento.css('shadowOffsetY', '10');
+
+                -webkit-box-shadow: 0 10px 6px -6px #777;
+                -moz-box-shadow: 0 10px 6px -6px #777;
+                box-shadow: 0 10px 6px -6px #777;
+*/                                
 			  }
 		}	
 	});
