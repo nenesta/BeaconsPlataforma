@@ -193,7 +193,7 @@ function sortResults(json, prop, asc) {
         }
     });
 }
-
+/** Se agrega comentario ***/
 function comparaCuadrados(){
     var regs = [];
     $('#box .cuadrado, #box .circulo').each(function(){
