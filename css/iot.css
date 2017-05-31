@@ -1,8 +1,8 @@
 #box{
-     width: calc(100% - 100px);//936px;//1178px;
+     width: 100%;//calc(100% - 100px);//936px;//1178px;
      height: 100%;//400px;
      //height: inherit;
-     min-height: 477px;
+     min-height: 415px;//477px;
      //border-style: solid;
 	 //position : absolute
 	 //margin: 100px 0px 0px 0px;
@@ -10,9 +10,9 @@
 }
 
 .icon-bar{
-    width: 100px;//1206px; /* Full-width */
-    height: 100%;//400px;//260px; /* Full-height */
-    min-height: 477px;
+    //width: 100px;//1206px; /* Full-width */
+    //height: 260px;//100%;//400px;//260px; /* Full-height */
+    //min-height: 477px;
     background-color: #2f4050;//#23527c;//#555; /* Dark-grey background */
     //overflow: auto; /* Overflow due to float */
     float: right;
