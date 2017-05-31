@@ -1,7 +1,9 @@
 #box{
-     width: 936px;//1178px;
-     height: 400px;
-	 //border-style: solid;
+     width: calc(100% - 100px);//936px;//1178px;
+     height: 100%;//400px;
+     //height: inherit;
+     min-height: 477px;
+     //border-style: solid;
 	 //position : absolute
 	 //margin: 100px 0px 0px 0px;
      float: left;
@@ -9,7 +11,8 @@
 
 .icon-bar{
     width: 100px;//1206px; /* Full-width */
-    height: 400px;//260px; /* Full-height */
+    height: 100%;//400px;//260px; /* Full-height */
+    min-height: 477px;
     background-color: #2f4050;//#23527c;//#555; /* Dark-grey background */
     //overflow: auto; /* Overflow due to float */
     float: right;

@@ -49,7 +49,7 @@ $(document).ready(function(){
 				elemento.css('-webkit-box-shadow', '10px 10px 6px -6px #777');
 				elemento.css('-moz-box-shadow', '10px 10px 6px -6px #777');
 				elemento.css('box-shadow', '10px 10px 6px -6px #777');
-				elemento.css('background-color', 'rgb('+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+')');
+//				elemento.css('background-color', 'rgb('+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+')');
                                 elemento.prop('id', 'cuad-'+contCuad++);
                                 elemento.prop('class', 'cuadrado');
                                 $(this).offset({ top: yPosOld, left: xPosOld });
@@ -90,12 +90,14 @@ miDibujo.shadowOffsetY=20;
 			  if(xPos>=xPosBox && yPos>=yPosBox && xPos<=parseInt(parseInt(xPosBox)+parseInt(widthBox)) && yPos<=parseInt(parseInt(yPosBox)+parseInt(heightBox))){
         			elemento = $(this).clone().draggable({ containment: "parent",
                                           stop: function(event, ui){
+                                              comparaCuadrados();
                                              } }).dblclick(function(e){ 
                                                                             e.stopPropagation();
                                                                             $(this).remove();
                                                                            });
 				elemento.css('position', 'absolute');
-                                elemento.css('color', 'rgb('+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+')');
+//                                elemento.css('color', 'rgb('+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+')');
+                                elemento.css('color', 'blue');
                                 elemento.prop('id', 'circ-'+contCirc++);
                                 elemento.prop('class', 'fa fa-bluetooth circulo');
                                 elemento.css('font-size', '36px');
