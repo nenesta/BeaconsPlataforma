@@ -50,6 +50,9 @@ $(document).ready(function(){
 				elemento.css('-moz-box-shadow', '10px 10px 6px -6px #777');
 				elemento.css('box-shadow', '10px 10px 6px -6px #777');
 //				elemento.css('background-color', 'rgb('+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+', '+parseInt(255*Math.random())+')');
+				elemento.css('background-color', '#d0d0d0');
+				elemento.css('border-style', 'solid');
+				elemento.css('border-width', '1px');
                                 elemento.prop('id', 'cuad-'+contCuad++);
                                 elemento.prop('class', 'cuadrado');
                                 $(this).offset({ top: yPosOld, left: xPosOld });
