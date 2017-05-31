@@ -9,8 +9,8 @@
 
 .icon-bar{
     width: 100px;//1206px; /* Full-width */
-    height: 400px//260px; /* Full-height */
-    background-color: #555; /* Dark-grey background */
+    height: 400px;//260px; /* Full-height */
+    background-color: #2f4050;//#23527c;//#555; /* Dark-grey background */
     //overflow: auto; /* Overflow due to float */
     float: right;
 }
@@ -21,13 +21,14 @@
     width: 100px; /* Equal width (5 icons with 20% width each = 100%)
     padding: 12px 0; /* Some top and bottom padding */
     transition: all 0.3s ease; /* Add transition for hover effects */
-    color: yellow;//white; /* White text color */
+    color: #a7b1c2;//yellow;//white; /* White text color */
     font-size: 36px; /* Increased font size */
     //display: block;
 }
 
 .icon-bar a:hover {
-    background-color: #000; /* Add a hover color */
+    background-color: #293846;//#000; /* Add a hover color */
+    color: white;
 }
 
 .switch-wrapper {
