@@ -24,6 +24,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link type="text/css" href="css/iot.css" rel="stylesheet" />
     <link type="text/css" href="css/style_iot.css" rel="stylesheet" />
+    <link type="text/css" href="css/w3.css" rel="stylesheet" />
     <link type="text/css" href="js/jquery-ui-themes-1.12.1/themes/redmond/jquery-ui.css" rel="stylesheet" />
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
@@ -222,7 +223,11 @@
                 </div>
             </div>
         </div>
-<!-- RSG:2017-05-30 INI: Se agrega box-->            
+<!-- RSG:2017-05-30 INI: Se agrega box-->     
+        <div class="w3-light-grey w3-round-xlarge" id="pbDimension">
+            <div class="w3-container w3-blue w3-center w3-round-xlarge" style="width:25%">1[m]</div>
+        </div>
+
         <div id="box" class="gray-bg">
         </div>
 <!--
@@ -230,9 +235,9 @@
 -->
         <div id="props" class="frm">
             <label class="frmLbl">Nombre:</label>
-            <input type="text" id="txtName" class="frmTxt">
+            <input type="text" id="txtName" class="frmTxt" disabled>
             <label class="frmLbl">Dimensión:</label>
-            <input type="text" id="txtDim" class="frmTxt">
+            <input type="text" id="txtDim" class="frmTxt" disabled>
         </div>
         <div id="iconBar" class="icon-bar">
             <div>

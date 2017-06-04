@@ -12,7 +12,34 @@ $(document).ready(function(){
 	var elemento;
         var contCuad=0;
         var contCirc=0;
-        
+        var metro;
+/*
+        $('#pbDimension').addEventListener('click', function (e) {
+            var x = e.pageX - this.offsetLeft, // or e.offsetX (less support, though)
+                y = e.pageY - this.offsetTop,  // or e.offsetY
+                clickedValue = x * this.max / this.offsetWidth;
+
+            console.log(x, y, clickedValue);
+        });    
+*/        
+        $('#pbDimension').click(function (e) {
+//            var x = e.pageX - this.offsetLeft, // or e.offsetX (less support, though)
+            var x = e.pageX - $(this).offset().left, // or e.offsetX (less support, though)
+                y = e.pageY - this.offsetTop,  // or e.offsetY
+                clickedValue = parseInt((x / this.offsetWidth)*100);
+
+//            console.log('e.pageX '+e.pageX);
+//            console.log('this.offsetLeft '+this.offsetLeft);
+//            console.log('this.offset '+$(this).offset());
+//            console.log('this.offset.left '+$(this).offset().left);
+//            console.log('e.pageY '+e.pageY);
+//            console.log('this.offsetTop '+this.offsetTop);
+//            console.log('this.offsetWidth '+this.offsetWidth);
+            
+            console.log(x, y, clickedValue);
+            $(':first-child',this).css('width', clickedValue+'%');
+        });    
+
         $("#iconBar")
 //            .css('overflow', 'hidden')
             .dialog({
@@ -21,6 +48,7 @@ $(document).ready(function(){
                                  my: "right top",  at: "right top+10",  of: "#box"
                                }
                     });
+                    
         $("#props").dialog({
                              width: "340px",
                              position: { 
@@ -54,6 +82,10 @@ $(document).ready(function(){
         			elemento = $(this).clone().draggable({ containment: "parent",
                                           stop: function(event, ui){
                                                 comparaCuadrados();
+                                                var lado = parseInt($(this).css('width')) / parseInt($('#pbDimension :first-child').css('width'));
+                                                var ancho = parseInt($(this).css('height')) / parseInt($('#pbDimension :first-child').css('width'));
+                                                $('#txtDim').val(parseFloat(lado).toFixed(2)+' x '+parseFloat(ancho).toFixed(2)+ ' [m]');
+                                                $('#txtName').val($(this).prop('id'));
                                              } }).resizable().dblclick(function(e){ 
                                                                             e.stopPropagation();
                                                                             $(this).remove();
@@ -246,6 +278,10 @@ function comparaCuadrados(){
                                 c2.draggable({containment: "parent",
                                               stop: function(event, ui){
                                                     comparaCuadrados();
+                                                    var lado = parseInt($(this).css('width')) / parseInt($('#pbDimension :first-child').css('width'));
+                                                    var ancho = parseInt($(this).css('height')) / parseInt($('#pbDimension :first-child').css('width'));
+                                                    $('#txtDim').val(parseFloat(lado).toFixed(2)+' x '+parseFloat(ancho).toFixed(2)+ ' [m]');
+                                                    $('#txtName').val($(this).prop('id'));
                                                  }                                
                                              }).resizable().dblclick(function(e){ 
                                                                                 e.stopPropagation();
