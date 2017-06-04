@@ -86,7 +86,16 @@ $(document).ready(function(){
                                                 var ancho = parseInt($(this).css('height')) / parseInt($('#pbDimension :first-child').css('width'));
                                                 $('#txtDim').val(parseFloat(lado).toFixed(2)+' x '+parseFloat(ancho).toFixed(2)+ ' [m]');
                                                 $('#txtName').val($(this).prop('id'));
-                                             } }).resizable().dblclick(function(e){ 
+                                             } }).resizable({
+                                             stop:
+                                                function(event, ui){
+                                                    comparaCuadrados();
+                                                    var lado = parseInt($(this).css('width')) / parseInt($('#pbDimension :first-child').css('width'));
+                                                    var ancho = parseInt($(this).css('height')) / parseInt($('#pbDimension :first-child').css('width'));
+                                                    $('#txtDim').val(parseFloat(lado).toFixed(2)+' x '+parseFloat(ancho).toFixed(2)+ ' [m]');
+                                                    $('#txtName').val($(this).prop('id'));
+                                                }
+                                             }).dblclick(function(e){ 
                                                                             e.stopPropagation();
                                                                             $(this).remove();
                                                                            });
@@ -283,7 +292,16 @@ function comparaCuadrados(){
                                                     $('#txtDim').val(parseFloat(lado).toFixed(2)+' x '+parseFloat(ancho).toFixed(2)+ ' [m]');
                                                     $('#txtName').val($(this).prop('id'));
                                                  }                                
-                                             }).resizable().dblclick(function(e){ 
+                                             }).resizable({
+                                                stop:
+                                                   function(event, ui){
+                                                       comparaCuadrados();
+                                                       var lado = parseInt($(this).css('width')) / parseInt($('#pbDimension :first-child').css('width'));
+                                                       var ancho = parseInt($(this).css('height')) / parseInt($('#pbDimension :first-child').css('width'));
+                                                       $('#txtDim').val(parseFloat(lado).toFixed(2)+' x '+parseFloat(ancho).toFixed(2)+ ' [m]');
+                                                       $('#txtName').val($(this).prop('id'));
+                                                   }
+                                             }).dblclick(function(e){ 
                                                                                 e.stopPropagation();
                                                                                 $(this).remove();
                                                                                });
