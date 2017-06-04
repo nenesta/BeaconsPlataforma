@@ -14,8 +14,9 @@
     //height: 260px;//100%;//400px;//260px; /* Full-height */
     //min-height: 477px;
     background-color: #2f4050;//#23527c;//#555; /* Dark-grey background */
-    //overflow: auto; /* Overflow due to float */
+    overflow: hidden;//auto; /* Overflow due to float */
     float: right;
+    //left: calc(100% - 100px);
 }
 
 .icon-bar a {
@@ -67,6 +68,14 @@
     -moz-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
+
+.frmLbl{
+    width: 100px;
+}
+.frmTxt{
+    width: 200px;
+}
+
 @keyframes radar{
     0%{
         width:36px;//50px;

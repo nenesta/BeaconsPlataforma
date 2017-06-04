@@ -13,13 +13,20 @@ $(document).ready(function(){
         var contCuad=0;
         var contCirc=0;
         
-        $( "#iconBar" ).css('overflow', 'hidden');
-//        $( "#iconBar" ).css('width', '120px');
-//        $( "#iconBar" ).css('height', '260px');
-        $( "#iconBar" ).dialog({width: "120px"});
-    //width: 100px;//1206px; /* Full-width */
-    //height: 260px;//100%;//400px;//260px; /* Full-height */
-        
+        $("#iconBar")
+//            .css('overflow', 'hidden')
+            .dialog({
+                     width: "120px",
+                     position: { 
+                                 my: "right top",  at: "right top+10",  of: "#box"
+                               }
+                    });
+        $("#props").dialog({
+                             width: "340px",
+                             position: { 
+                                         my: "left top",  at: "left top+10",  of: "#box"
+                                       }
+                           });
         
         $("div.cuadrado").hover(function(){
         		////console.log("Estoy en el cuadrado "+ $(this).prop("id"));
